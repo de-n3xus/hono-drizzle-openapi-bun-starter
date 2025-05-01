@@ -14,6 +14,11 @@ router.get(
 	'/',
 	describeRoute({
 		tags: ['Пользователь'],
+		security: [
+			{
+				bearerAuth: [],
+			},
+		],
 		responses: {
 			200: userInfoResponseScheme,
 			'4xx, 5xx': defaultErrorResponse,
@@ -26,6 +31,11 @@ router.patch(
 	'/settings',
 	describeRoute({
 		tags: ['Пользователь'],
+		security: [
+			{
+				bearerAuth: [],
+			},
+		],
 		responses: {
 			200: defaultOkResponse,
 			'4xx, 5xx': defaultErrorResponse,
@@ -41,6 +51,11 @@ router.patch(
 	'/settings/avatar',
 	describeRoute({
 		tags: ['Пользователь'],
+		security: [
+			{
+				bearerAuth: [],
+			},
+		],
 		responses: {
 			200: userAvatarUpdatedResponseSchema,
 			'4xx, 5xx': defaultErrorResponse,
@@ -53,6 +68,11 @@ router.delete(
 	'/settings/avatar',
 	describeRoute({
 		tags: ['Пользователь'],
+		security: [
+			{
+				bearerAuth: [],
+			},
+		],
 		responses: {
 			200: defaultOkResponse,
 			'4xx, 5xx': defaultErrorResponse,
