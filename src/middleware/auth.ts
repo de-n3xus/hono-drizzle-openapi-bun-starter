@@ -10,7 +10,7 @@ import { JWTPayload } from 'hono/utils/jwt/types'
 import { useSession } from '@/utils/session.ts'
 
 export async function authMiddleware (c: Context, next: Next) {
-	const path = c.req.path
+	const { path } = c.req
 
 	if (
 		(

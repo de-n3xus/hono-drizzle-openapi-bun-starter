@@ -30,12 +30,6 @@ export const authSignupSchema = z.object({
 		})
 		.min(8, 'Минимальная длина пароля - 8 символов')
 		.max(52, 'Максимальная длина пароля - 8 символов'),
-	inviteCode: z
-		.string({
-			invalid_type_error: 'Неверный код приглашения',
-			required_error: 'Введите код приглашения',
-		})
-		.optional(),
 })
 
 export const signUpController = {

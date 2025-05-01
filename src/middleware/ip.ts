@@ -16,8 +16,6 @@ export const getIp = createMiddleware(async (c, next) => {
 		c.req.header('forwarded')
 		??
 		c.req.header('forwarded-for')
-		??
-		c.req.header('cf-connecting-ip')
 	)
 
 	if (!ip) {
