@@ -1,0 +1,10 @@
+# deps
+node_modules/
+
+.idea/
+.log
+
+.env
+.env.*
+
+!.env.example
