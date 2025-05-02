@@ -40,7 +40,7 @@ Create a .env file in the root directory and add the following variables:
 # Database
 DATABASE_URL=postgresql://user:password@localhost:5432/dbname
 
-# Redis (optional for rate limiting)
+# Redis
 REDIS_HOST=localhost  
 REDIS_PORT=6379  
 REDIS_USERNAME=  
