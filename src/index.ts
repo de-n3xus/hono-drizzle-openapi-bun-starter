@@ -23,7 +23,7 @@ app.use('*', cors())
 app.use('*', logger())
 app.use(
 	rateLimiter({
-		windowMs: 60, // 1 min
+		windowMs: 60 * 1000, // 1 min
 		limit: 100,
 		standardHeaders: 'draft-7',
 		keyGenerator: async (c): Promise<string> => {
