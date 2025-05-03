@@ -16,8 +16,6 @@ export async function authMiddleware (c: Context, next: Next) {
 		(
 			path.startsWith('/auth')
 			&&
-			!path.startsWith('/auth/refresh')
-			&&
 			!path.startsWith('/auth/logout')
 		)
 		||

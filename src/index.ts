@@ -38,10 +38,7 @@ app.use(
 	}),
 )
 
-app.use('/auth/*', authMiddleware)
-app.use('/user/*', authMiddleware)
-app.use('/chat/*', authMiddleware)
-app.use('/subscription/*', authMiddleware)
+app.use('*', authMiddleware)
 
 app.get('/ui', Scalar({ url: '/openapi' }))
 
